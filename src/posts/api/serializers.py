@@ -2,6 +2,7 @@ from rest_framework import serializers
 
 from posts.models import Post
 
+#HyperlinkedIdentityField is used to get details in url
 class PostSerializer(serializers.ModelSerializer):
     url = serializers.HyperlinkedIdentityField(
             view_name = 'posts-api-list:detail',
